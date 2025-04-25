@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="css/quienesSomos.css">
+    <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+    <div class="background"></div>
+    <div class="mainContainer">
+        <header>
+            <div class="mainLogo">
+                <a href="home.html">
+                    <img src="img/LogoBlack.svg" alt="">
+                </a>
+            </div>
+            <div class="mainNav">
+                <nav>
+                    <a href="quienesSomos.html" data-translate="nav.quienesSomos">Quienes Somos</a>
+                    <a href="nuestrosServicios.html" data-translate="nav.servicios">Nuestros Servicios</a>
+                    <a href="marcas.html" data-translate="nav.marcas">Marcas</a>
+                    <a href="opiniones.html" data-translate="nav.opiniones">Opiniones de Nuestros Clientes</a>
+                    <a href="serviciosEspeciales.html" data-translate="nav.serviciosEspeciales">Servicios Especiales</a>
+                    <a href="formContacto.html" data-translate="nav.contacto">Contacto</a>
+                    
+                    <div class="combo-header">
+                        <select id="tipoMoto" onchange="redirigirTipo()">
+                            <option data-translate="info.tipoMoto" value="">Tipo de Moto</option>
+                            <option data-translate="info.Deportiva" value="motosDeportivas.html">Deportiva</option>
+                            <option data-translate="info.Naked" value="motosNaked.html">Naked</option>
+                        </select>
+                    </div>
+                    
+                    <select id="languageSelector">
+                        <option data-translate="info.Español" value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                    <a href="landing.html" data-translate="nav.regresar">Regresar</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="empresa" id="QuienesSomos">
+                <h1 data-translate="info.quienes">¡¿Quienes somos?!</h1>
+                <p data-translate="info.quienesInfo">En Shadow Riders, vivimos y respiramos motocicletas. Somos una
+                    agencia especializada en la venta,
+                    financiamiento y mantenimiento de motos, comprometida con brindar a nuestros clientes la mejor
+                    experiencia sobre dos ruedas.
+
+                    Trabajamos con marcas reconocidas a nivel mundial como Honda, Yamaha, Kawasaki, Suzuki, Ducati y
+                    KTM, garantizando calidad y variedad en cada modelo. Desde motos urbanas hasta motocicletas de alto
+                    rendimiento, ofrecemos opciones para todos los estilos de vida y necesidades.
+
+                    Nuestro equipo está formado por apasionados del motociclismo que entienden lo que significa la
+                    libertad de rodar. Más que vender motocicletas, creamos conexiones entre pilotos y máquinas,
+                    asegurando calidad, seguridad y un servicio personalizado.
+
+                    Ya sea que busques tu primera moto o quieras mejorar tu experiencia, en Shadow Riders estamos aquí
+                    para acompañarte en cada kilómetro del camino.
+
+                    ¡Siente la libertad, vive la aventura y únete a nuestra comunidad motera!</p>
+                <div class="carrusel-marcas">
+                    <div class="combo-url">
+                        <label data-translate="info.irMarca" for="marcas">Sitios Oficiales</label>
+                        <select id="marcas" onchange="irMarca()">
+                            <option data-translate="info.seleccionMarcas" value="">Selecciona una marca</option>
+                            <option value="https://mundohonda.cr">Honda</option>
+                            <option value="https://www.yamahacostarica.com">Yamaha</option>
+                            <option value="https://costarica.kawasaki-la.com/es-la/">Kawasaki</option>
+                            <option
+                                value="https://motos-suzuki.com/?gad_source=1&gclid=Cj0KCQjwqv2_BhC0ARIsAFb5Ac9MVvCcC4twuIK3Vr901eLtp5VPz3_tHgdlOdRkKGSkys-hA-UtRrkaAtfIEALw_wcB">
+                                Suzuki</option>
+                            <option value="https://www.ducati.com/ww/en/home">Ducati</option>
+                            <option value="https://www.ktm.com/es-cr.html">KTM</option>
+                        </select>
+                    </div>
+                    <div class="carrusel-container">
+                        <button class="prev" onclick="moverCarrusel(-1)">&#10094;</button>
+                        <div class="imagenes">
+                            <img src="img/hondaLogo.png" alt="Honda">
+                            <img src="img/yamahaLogo.png" alt="Yamaha">
+                            <img src="img/kawasakiLogo.png" alt="Kawasaki">
+                            <img src="img/suzukiLogo.png" alt="Suzuki">
+                            <img src="img/ducatiLogo.png" alt="Ducati">
+                            <img src="img/ktmLogo.png" alt="KTM">
+                        </div>
+                        <button class="next" onclick="moverCarrusel(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer>
+                <div class="footerContainer">
+                    <div class="footerInfo">
+                        <div class="footerLogo">
+                            <img src="img/LogoBlack.svg" alt="">
+                        </div>
+                        <div class="containerInfo">
+                            <div class="Info">
+                                <img src="img/telefonoBlack.png" alt="">
+                                <p data-translate="footer.telefono">+506 6271-0602</p>
+                            </div>
+                            <div class="Info">
+                                <img src="img/correoBlack.png" alt="">
+                                <p data-translate="footer.correo">shadowriders@gmail.com</p>
+                            </div>
+                            <div class="Info">
+                                <img src="img/ubicacionBlack.png" alt="">
+                                <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="derechos" data-translate="footer.derechos">
+                        &copy; Shadow Riders <br> Todos los derechos reservados
+                    </div>
+                </div>
+            </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/controllers/homeScroll.js"></script>
+    <script src="js/controllers/contactFormHome.js"></script>
+    <script src="js/controllers/translations.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+    <script src="js/controllers/carruselMarcas.js"></script>
+    <script src="js/controllers/comboDoble.js"></script>
+
+</body>
+
+</html>

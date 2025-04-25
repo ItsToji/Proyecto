@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="css/serviciosEspeciales.css">
+    <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+    <div class="background"></div>
+    <div class="mainContainer">
+        <header>
+            <div class="mainLogo">
+                <a href="home.html">
+                    <img src="img/LogoBlack.svg" alt="">
+                </a>
+            </div>
+            <div class="mainNav">
+                <nav>
+                    <a href="quienesSomos.html" data-translate="nav.quienesSomos">Quienes Somos</a>
+                    <a href="nuestrosServicios.html" data-translate="nav.servicios">Nuestros Servicios</a>
+                    <a href="marcas.html" data-translate="nav.marcas">Marcas</a>
+                    <a href="opiniones.html" data-translate="nav.opiniones">Opiniones de Nuestros Clientes</a>
+                    <a href="serviciosEspeciales.html" data-translate="nav.serviciosEspeciales">Servicios Especiales</a>
+                    <a href="formContacto.html" data-translate="nav.contacto">Contacto</a>
+                    
+                    <div class="combo-header">
+                        <select id="tipoMoto" onchange="redirigirTipo()">
+                            <option data-translate="info.tipoMoto" value="">Tipo de Moto</option>
+                            <option data-translate="info.Deportiva" value="motosDeportivas.html">Deportiva</option>
+                            <option data-translate="info.Naked" value="motosNaked.html">Naked</option>
+                        </select>
+                    </div>
+                    
+                    <select id="languageSelector">
+                        <option data-translate="info.Español" value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                    <a href="landing.html" data-translate="nav.regresar">Regresar</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+
+            <div class="serviciosEspeciales" id="ServiciosEspeciales">
+                <div class="encabezadoServicios">
+                    <h2 data-translate="info.serviciosEspeciales">Servicios Especiales</h2>
+                    <div class="buscadorServicios">
+                        <input type="text" id="buscadorServicios" placeholder="Buscar servicio..."
+                            data-translate="infoBuscador.buscarServicio" />
+
+                    </div>
+                </div>
+                <div class="containerServiciosEspeciales">
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/calidad.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp1">Calidad</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo1">Garantizamos una gran calidad
+                                al cliente</p>
+                        </div>
+                    </div>
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/soporte.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp2">Servicio 24/7
+                            <p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo2">Ofrecemos un servicio de
+                                calidad al cliente</p>
+                        </div>
+                    </div>
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/precio.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp3">Precios Competitivos</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo3">Tenemos precios llamativos en
+                                el mercado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="containerServiciosEspeciales">
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/domicilio.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp4">Entrega a domicilio</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo4">Llevamos tu moto hasta la
+                                puerta de tu casa</p>
+                        </div>
+                    </div>
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/manejo.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp5">Pruebas de manejo</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo5">Agenda una prueba de manejo
+                                antes de decidir</p>
+                        </div>
+                    </div>
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/personalización.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp6">Personalización estética</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo6">Cambios en pintura, vinilos,
+                                luces y más</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="containerServiciosEspeciales">
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/rendimiento.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp7">Modificaciones de rendimiento
+                            </p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo7">Mejora tu motor, escape,
+                                suspensión o frenos</p>
+                        </div>
+                    </div>
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/alquiler.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp8">Alquiler de motos</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo8">Renta motos por días o semanas
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/diagnostico.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp9">Diagnóstico computarizado</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo9">Revisamos tu moto con
+                                tecnología avanzada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="containerServiciosEspeciales">
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/lavado.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp10">Lavado premium</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo10">Limpieza detallada y
+                                protección de pintura</p>
+                        </div>
+                    </div>
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/tramites.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp11">Gestión de trámites</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo11">Te ayudamos con marchamos,
+                                RTV y traspasos</p>
+                        </div>
+                    </div>
+                    <div class="servicioEspecial">
+                        <div class="imgServicioEspecial">
+                            <img src="img/capacitacion.png" alt="">
+                        </div>
+                        <div class="servicioEspecialContainer">
+                            <p class="nombreServicio" data-translate="info.servicioEsp12">Capacitación para nuevos
+                                motociclistas</p>
+                            <p class="desServicio" data-translate="info.servicioEspInfo12">Clases básicas de manejo y
+                                mantenimiento
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerInfo">
+                    <div class="footerLogo">
+                        <img src="img/LogoBlack.svg" alt="">
+                    </div>
+                    <div class="containerInfo">
+                        <div class="Info">
+                            <img src="img/telefonoBlack.png" alt="">
+                            <p data-translate="footer.telefono">+506 6271-0602</p>
+                        </div>
+
+                        <div class="Info">
+                            <img src="img/correoBlack.png" alt="">
+                            <p data-translate="footer.correo">shadowriders@gmail.com</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/ubicacionBlack.png" alt="">
+                            <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="derechos" data-translate="footer.derechos">
+                    &copy; Shadow Riders <br> Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/controllers/homeScroll.js"></script>
+    <script src="js/controllers/translations.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+    <script src="js/controllers/comboDoble.js"></script>
+    <script src="js/controllers/serviciosBuscador.js"></script>
+    <script src="js/controllers/serviciosEspeciales.json"></script>
+</body>
+
+</html>

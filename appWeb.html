@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="css/appWeb.css">
+    <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+    <div class="background"></div>
+    <div class="mainContainer">
+        <header>
+            <div class="mainLogo">
+                <a href="landing.html">
+                    <img src="img/LogoBlack.svg" alt="">
+                </a>
+            </div>
+
+            <div class="cotizacionTitulo">
+                <h1 data-translate="nav.futuraMoto">Cotiza tu futura moto</h1>
+                <p data-translate="nav.futuraMotoParrafo">
+                    ¡Elige tu mara favorita!
+                </p>
+            </div>
+
+            <div class="mainNav">
+                <nav>
+                    <a href="landing.html" data-translate="nav.landing">Regresar</a>
+                    <select id="languageSelector">
+                        <option data-translate="info.Español" value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="filtro-container">
+                <label data-translate="filtro.texto1" for="filtroMarca">Filtrar por marca:</label>
+                <select id="filtroMarca">
+                    <option data-translate="filtro.texto2" value="todas">Todas</option>
+                    <option value="Yamaha">Yamaha</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Kawasaki">Kawasaki</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="KTM">KTM</option>
+                    <option value="Ducati">Ducati</option>
+                </select>
+                <a href="manualUsuario.pdf" download class="boton-descarga" data-translate="manual.manual">Manual
+                    Usuario</a>
+            </div>
+
+            <div class="contenedor-motos" id="contenedorMotos">
+                <!-- Las tarjetas de motos se cargan aquí -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerInfo">
+                    <div class="footerLogo">
+                        <img src="img/LogoBlack.svg" alt="">
+                    </div>
+                    <div class="containerInfo">
+                        <div class="Info">
+                            <img src="img/telefonoBlack.png" alt="">
+                            <p data-translate="footer.telefono">+506 6271-0602</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/correoBlack.png" alt="">
+                            <p data-translate="footer.correo">shadowriders@gmail.com</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/ubicacionBlack.png" alt="">
+                            <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="derechos" data-translate="footer.derechos">
+                    &copy; Shadow Riders <br> Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/controllers/translations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/controllers/homeScroll.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+    <script src="js/controllers/comboDoble.js"></script>
+    <script src="js/controllers/appWeb.js"></script>
+
+</body>
+
+</html>

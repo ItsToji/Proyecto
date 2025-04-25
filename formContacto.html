@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="css/formContacto.css">
+    <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+    <div class="background"></div>
+    <div class="mainContainer">
+        <header>
+            <div class="mainLogo">
+                <a href="home.html">
+                    <img src="img/LogoBlack.svg" alt="">
+                </a>
+            </div>
+            <div class="mainNav">
+                <nav>
+                    <a href="quienesSomos.html" data-translate="nav.quienesSomos">Quienes Somos</a>
+                    <a href="nuestrosServicios.html" data-translate="nav.servicios">Nuestros Servicios</a>
+                    <a href="marcas.html" data-translate="nav.marcas">Marcas</a>
+                    <a href="opiniones.html" data-translate="nav.opiniones">Opiniones de Nuestros Clientes</a>
+                    <a href="serviciosEspeciales.html" data-translate="nav.serviciosEspeciales">Servicios Especiales</a>
+                    <a href="formContacto.html" data-translate="nav.contacto">Contacto</a>
+                    
+                    <div class="combo-header">
+                        <select id="tipoMoto" onchange="redirigirTipo()">
+                            <option data-translate="info.tipoMoto" value="">Tipo de Moto</option>
+                            <option data-translate="info.Deportiva" value="motosDeportivas.html">Deportiva</option>
+                            <option data-translate="info.Naked" value="motosNaked.html">Naked</option>
+                        </select>
+                    </div>
+                    
+                    <select id="languageSelector">
+                        <option data-translate="info.Español" value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                    <a href="landing.html" data-translate="nav.regresar">Regresar</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="containerMainForm">
+                <div class="containerParagraph">
+                    <p class="text1" data-translate="info.contacto1">Contáctate con Shadow Riders</p>
+                    <p class="text2" data-translate="info.contacto2">¿Necesitas ayuda? <br> Llena el formulario y te
+                        contactaremos</p>
+
+                </div>
+                <div class="containerForm">
+                    <form id="ContactForm">
+                        <input type="text" id="txtName" placeholder="Nombre Completo"
+                            data-translate="info.nombreCompleto" required>
+                        <input type="email" id="txtEmail" placeholder="Correo Electrónico"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-translate="info.correoElectronico"
+                            required>
+                        <input type="tel" id="txtTel" placeholder="Teléfono (8 dígitos)" pattern="[0-9]{8}"
+                            data-translate="info.telefono" required>
+                        <textarea id="txtMessage" placeholder="Mensaje" data-translate="info.mensaje"
+                            required></textarea>
+                        <div class="positionButton">
+                            <input type="submit" id="txtButton" value="Enviar" data-translate="info.enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Redirección Encuesta -->
+            <div class="buttonEncuesta">
+                <h2 data-translate="infoEncuesta.titulo">Ayúdanos a mejorar</h2>
+                <p data-translate="infoEncuesta.descripcion">Responde la siguiente encuesta</p>
+                <a href="encuesta.html">
+                    <button class="buttonEncuestaRedi" data-translate="infoEncuesta.boton">Realizar encuesta</button>
+                </a>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerInfo">
+                    <div class="footerLogo">
+                        <img src="img/LogoBlack.svg" alt="">
+                    </div>
+                    <div class="containerInfo">
+                        <div class="Info">
+                            <img src="img/telefonoBlack.png" alt="">
+                            <p data-translate="footer.telefono">+506 6271-0602</p>
+                        </div>
+
+                        <div class="Info">
+                            <img src="img/correoBlack.png" alt="">
+                            <p data-translate="footer.correo">shadowriders@gmail.com</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/ubicacionBlack.png" alt="">
+                            <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="derechos" data-translate="footer.derechos">
+                    &copy; Shadow Riders <br> Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/controllers/homeScroll.js"></script>
+    <script src="js/controllers/translations.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/controllers/formContacto.js"></script>
+    <script src="js/controllers/comboDoble.js"></script>
+
+
+</body>
+
+</html>

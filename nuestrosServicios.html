@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="css/nuestrosServicios.css">
+    <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+    <div class="background"></div>
+    <div class="mainContainer">
+        <header>
+            <div class="mainLogo">
+                <a href="home.html">
+                    <img src="img/LogoBlack.svg" alt="">
+                </a>
+            </div>
+            <div class="mainNav">
+                <nav>
+                    <a href="quienesSomos.html" data-translate="nav.quienesSomos">Quienes Somos</a>
+                    <a href="nuestrosServicios.html" data-translate="nav.servicios">Nuestros Servicios</a>
+                    <a href="marcas.html" data-translate="nav.marcas">Marcas</a>
+                    <a href="opiniones.html" data-translate="nav.opiniones">Opiniones de Nuestros Clientes</a>
+                    <a href="serviciosEspeciales.html" data-translate="nav.serviciosEspeciales">Servicios Especiales</a>
+                    <a href="formContacto.html" data-translate="nav.contacto">Contacto</a>
+                    
+                    <div class="combo-header">
+                        <select id="tipoMoto" onchange="redirigirTipo()">
+                            <option data-translate="info.tipoMoto" value="">Tipo de Moto</option>
+                            <option data-translate="info.Deportiva" value="motosDeportivas.html">Deportiva</option>
+                            <option data-translate="info.Naked" value="motosNaked.html">Naked</option>
+                        </select>
+                    </div>
+                    
+                    <select id="languageSelector">
+                        <option data-translate="info.Español" value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                    <a href="landing.html" data-translate="nav.regresar">Regresar</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="servicios" id="Servicios">
+                <h1 data-translate="info.servicios">Nuestros Servicios</h1>
+                <div class="serviciosContainer">
+                    <div class="servicio">
+                        <div class="containerImg">
+                            <img src="img/venta.jpg" alt="">
+                        </div>
+                        <div class="texts">
+                            <h2 data-translate="info.venta">Venta de Motos</h2>
+                            <p data-translate="info.ventaInfo">Descubre nuestra amplia gama de modelos y encuentra la
+                                moto perfecta para ti</p>
+                        </div>
+                    </div>
+                    <div class="servicio">
+                        <div class="containerImg">
+                            <img src="img/financiamiento.jpg" alt="">
+                        </div>
+                        <div class="texts">
+                            <h2 data-translate="info.financiamiento">Financiamiento</h2>
+                            <p data-translate="info.financiamientoInfo">Te ofrecemos planes de financiamiento flexibles
+                                para que puedas adquirir tu moto de forma sencilla</p>
+                        </div>
+                    </div>
+                    <div class="servicio">
+                        <div class="containerImg">
+                            <img src="img/mantenimiento.jpg" alt="">
+                        </div>
+                        <div class="texts">
+                            <h2 data-translate="info.mantenimiento">Mantenimiento</h2>
+                            <p data-translate="info.mantenimientoInfo">Confía en nuestro equipo de expertos para
+                                mantener tu moto en óptimas condiciones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="centrado">
+                <div class="pestañas">
+                    <h2 data-translate="info.MásInfo">Más Información sobre Nuestros Servicios</h2>
+                    <div class="tab-container">
+                        <div class="tab-buttons">
+                            <button class="tab-button active" data-tab="tab1" data-translate="tabs.venta">Venta de Motos</button>
+                            <button class="tab-button" data-tab="tab2" data-translate="tabs.financiamiento">Financiamiento</button>
+                            <button class="tab-button" data-tab="tab3" data-translate="tabs.mantenimiento">Mantenimiento</button>
+                        </div>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab active">
+                                <p data-translate="tabs.ventaTexto">Ofrecemos una amplia gama de modelos de motos pensados para todos los estilos, gustos
+                                    y necesidades. Ya sea que busques una moto económica para movilizarte por la ciudad o un
+                                    modelo más robusto para aventuras largas, tenemos la opción ideal para vos. Nuestro
+                                    equipo está listo para asesorarte y ayudarte a encontrar la moto perfecta que se adapte
+                                    a tu vida diaria.
+                                </p>
+                            </div>
+                            <div id="tab2" class="tab">
+                                <p data-translate="tabs.financiamientoTexto">Contamos con planes de financiamiento accesibles, personalizados y fáciles de
+                                    gestionar. Queremos que el proceso de adquirir tu moto sea ágil y sin complicaciones, por eso
+                                    ofrecemos múltiples opciones de pago, plazos flexibles y cuotas ajustadas a tu
+                                    presupuesto. Te ayudamos en cada paso para que puedas hacer realidad tu compra sin
+                                    estrés.
+                                </p>
+                            </div>
+                            <div id="tab3" class="tab">
+                                <p data-translate="tabs.mantenimientoTexto">Brindamos servicios de mantenimiento preventivo y correctivo con altos estándares de
+                                    calidad, para que tu moto siempre esté en condiciones óptimas. Nuestro taller cuenta con
+                                    técnicos capacitados, herramientas especializadas y repuestos originales. Nos encargamos
+                                    de que tengas la seguridad, el rendimiento y la tranquilidad que necesitas en cada
+                                    kilómetro.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subscripcion">
+                    <h2 data-translate="subscription.titulo">Suscríbete a nuestro boletín</h2>
+                    <p data-translate="subscription.descripcion">Recibe las últimas noticias y ofertas directamente en
+                        tu
+                        correo.</p>
+                    <form id="subscriptionForm">
+                        <input type="email" id="subscriberEmail" placeholder="Correo Electrónico"
+                            data-translate="subscription.placeholder" required>
+                        <button type="submit" data-translate="subscription.boton">Suscribirse</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerInfo">
+                    <div class="footerLogo">
+                        <img src="img/LogoBlack.svg" alt="">
+                    </div>
+                    <div class="containerInfo">
+                        <div class="Info">
+                            <img src="img/telefonoBlack.png" alt="">
+                            <p data-translate="footer.telefono">+506 6271-0602</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/correoBlack.png" alt="">
+                            <p data-translate="footer.correo">shadowriders@gmail.com</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/ubicacionBlack.png" alt="">
+                            <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="derechos" data-translate="footer.derechos">
+                    &copy; Shadow Riders <br> Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/controllers/homeScroll.js"></script>
+    <script src="js/controllers/translations.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/controllers/nuestrosServiciosBoletín.js"></script>
+    <script src="js/controllers/pestañas.js"></script>
+    <script src="js/controllers/comboDoble.js"></script>
+
+
+</body>
+
+</html>

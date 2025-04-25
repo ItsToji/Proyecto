@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="css/marcas.css">
+    <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+    <div class="background"></div>
+    <div class="mainContainer">
+        <header>
+            <div class="mainLogo">
+                <a href="home.html">
+                    <img src="img/LogoBlack.svg" alt="">
+                </a>
+            </div>
+            <div class="mainNav">
+                <nav>
+                    <a href="quienesSomos.html" data-translate="nav.quienesSomos">Quienes Somos</a>
+                    <a href="nuestrosServicios.html" data-translate="nav.servicios">Nuestros Servicios</a>
+                    <a href="marcas.html" data-translate="nav.marcas">Marcas</a>
+                    <a href="opiniones.html" data-translate="nav.opiniones">Opiniones de Nuestros Clientes</a>
+                    <a href="serviciosEspeciales.html" data-translate="nav.serviciosEspeciales">Servicios Especiales</a>
+                    <a href="formContacto.html" data-translate="nav.contacto">Contacto</a>
+                    
+                    <div class="combo-header">
+                        <select id="tipoMoto" onchange="redirigirTipo()">
+                            <option data-translate="info.tipoMoto" value="">Tipo de Moto</option>
+                            <option data-translate="info.Deportiva" value="motosDeportivas.html">Deportiva</option>
+                            <option data-translate="info.Naked" value="motosNaked.html">Naked</option>
+                        </select>
+                    </div>
+                    
+                    <select id="languageSelector">
+                        <option data-translate="info.Español" value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                    <a href="landing.html" data-translate="nav.regresar">Regresar</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+
+            <div class="marcas" id="Marcas">
+                <h2 data-translate="info.marcas">Marcas</h2>
+                <p data-translate="marcas.descripcion"> Aquí podrás conocer más detalles sobre las principales marcas de motocicletas que trabajamos
+                    actualmente en nuestra empresa. Cada una ofrece características únicas para diferentes estilos y
+                    necesidades de conducción. </p>
+                <div class="containerMarcasSecun">
+                    <div class="containerFila1">
+                        <div class="marca">
+                            <img src="img/honda.jpg" alt="Honda">
+                            <div class="nombreMarca">Honda</div>
+                        </div>
+                        <div class="marca">
+                            <img src="img/yamaha.jpg" alt="Yamaha">
+                            <div class="nombreMarca">Yamaha</div>
+                        </div>
+                        <div class="marca">
+                            <img src="img/kawasaki.jpg" alt="Kawasaki">
+                            <div class="nombreMarca">Kawasaki</div>
+                        </div>
+                    </div>
+                    <div class="containerFila2">
+                        <div class="marca">
+                            <img src="img/suzuki.jpg" alt="Suzuki">
+                            <div class="nombreMarca">Suzuki</div>
+                        </div>
+                        <div class="marca">
+                            <img src="img/ducati.jpg" alt="Ducati">
+                            <div class="nombreMarca">Ducati</div>
+                        </div>
+                        <div class="marca">
+                            <img src="img/ktm.jpg" alt="KTM">
+                            <div class="nombreMarca">KTM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox de Video -->
+            <div id="videoLightbox" class="lightbox">
+                <span class="close" onclick="cerrarVideoLightbox()">&times;</span>
+                <div class="lightbox-content">
+                    <video id="videoYamaha" controls>
+                        <source src="video/yamahaR6.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <div class="lightbox-info">
+                        <p data-translate="marcas.videoDescripcion">Este es uno de los sonidos más icónicos de las motocicletas Yamaha R6</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón para abrir el Lightbox del Video -->
+            <div class="videoTrigger">
+                <button onclick="abrirVideoLightbox()" data-translate="marcas.botonYamaha">Escuchar Sonido Yamaha</button>
+            </div>
+
+        </main>
+        <footer>
+            <div class="footerContainer">
+                <div class="footerInfo">
+                    <div class="footerLogo">
+                        <img src="img/LogoBlack.svg" alt="">
+                    </div>
+                    <div class="containerInfo">
+                        <div class="Info">
+                            <img src="img/telefonoBlack.png" alt="">
+                            <p data-translate="footer.telefono">+506 6271-0602</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/correoBlack.png" alt="">
+                            <p data-translate="footer.correo">shadowriders@gmail.com</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/ubicacionBlack.png" alt="">
+                            <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="derechos" data-translate="footer.derechos">
+                    &copy; Shadow Riders <br> Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="cerrarLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="Marca">
+            <div class="lightbox-info" id="lightboxInfo">
+                <!-- Aquí se mostrará la información de la marca -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/controllers/translations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/controllers/homeScroll.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+    <script src="js/controllers/marcas.js"></script>
+    <script src="js/controllers/comboDoble.js"></script>
+
+
+</body>
+
+</html>

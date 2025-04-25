@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="encuesta.titulo">Encuesta de Satisfacción</title>
+    <link rel="stylesheet" href="css/encuesta.css" />
+    <link rel="icon" href="img/moto.png" />
+  </head>
+
+  <body>
+    <div class="mainContainer">
+      <header>
+        <div class="mainLogo">
+          <a href="home.html">
+            <img src="img/LogoBlack.svg" alt="" />
+          </a>
+        </div>
+
+        <select id="languageSelector">
+          <option data-translate="info.Español" value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </header>
+      <main>
+        <div class="containerTexts">
+          <h1 data-translate="encuesta.titulo">Encuesta de Satisfacción</h1>
+          <p data-translate="encuesta.descripcion">
+            Ayúdanos a mejorar respondiendo esta breve encuesta.
+          </p>
+        </div>
+
+        <div class="containerSurvey">
+          <form id="SurveyForm">
+            <div class="question" id="userEmailContainer">
+              <label for="userEmail" data-translate="encuesta.correo"
+                >Correo Electrónico:</label
+              >
+              <input
+                type="email"
+                id="userEmail"
+                name="userEmail"
+                data-translate="encuesta.placeholderCorreo"
+                placeholder="Ingresa tu correo"
+                required
+              />
+            </div>
+
+            <div class="question">
+              <label for="q1" data-translate="encuesta.pregunta1"
+                >1. ¿Qué tan satisfecho estás con nuestro servicio?</label
+              >
+              <div class="options">
+                <label
+                  ><input
+                    type="radio"
+                    name="q1"
+                    value="Muy satisfecho"
+                    required
+                  />
+                  <span data-translate="encuesta.opcion1"
+                    >Muy satisfecho</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="Satisfecho" />
+                  <span data-translate="encuesta.opcion2"
+                    >Satisfecho</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="Neutral" />
+                  <span data-translate="encuesta.opcion3">Neutral</span></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="Insatisfecho" />
+                  <span data-translate="encuesta.opcion4"
+                    >Insatisfecho</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="q1" value="Muy insatisfecho" />
+                  <span data-translate="encuesta.opcion5"
+                    >Muy insatisfecho</span
+                  ></label
+                >
+              </div>
+            </div>
+
+            <div class="question">
+              <label for="q2" data-translate="encuesta.pregunta2"
+                >2. ¿Recomendarías nuestro servicio a otras personas?</label
+              >
+              <div class="options">
+                <label
+                  ><input type="radio" name="q2" value="Sí" required />
+                  <span data-translate="encuesta.si">Sí</span></label
+                >
+                <label
+                  ><input type="radio" name="q2" value="No" />
+                  <span data-translate="encuesta.no">No</span></label
+                >
+              </div>
+            </div>
+
+            <div class="question">
+              <label for="q3" data-translate="encuesta.pregunta3"
+                >3. ¿Qué podemos mejorar?</label
+              >
+              <textarea
+                name="q3"
+                id="q3"
+                rows="4"
+                data-translate="encuesta.placeholderTexto"
+                placeholder="Escribe tu respuesta aquí..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="containerButtons">
+              <div class="buttonBack">
+                <a
+                  href="formContacto.html"
+                  id="backButton"
+                  data-translate="encuesta.volver"
+                  >Volver</a
+                >
+              </div>
+              <div class="buttonSend">
+                <input
+                  type="submit"
+                  id="surveyButton"
+                  data-translate="encuesta.enviar"
+                  value="Enviar Encuesta"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footerContainer">
+          <div class="footerInfo">
+            <div class="footerLogo">
+              <img src="img/LogoBlack.svg" alt="" />
+            </div>
+            <div class="containerInfo">
+              <div class="Info">
+                <img src="img/telefonoBlack.png" alt="" />
+                <p data-translate="footer.telefono">+506 6271-0602</p>
+              </div>
+              <div class="Info">
+                <img src="img/correoBlack.png" alt="" />
+                <p data-translate="footer.correo">shadowriders@gmail.com</p>
+              </div>
+              <div class="Info">
+                <img src="img/ubicacionBlack.png" alt="" />
+                <p data-translate="footer.ubicacion">
+                  Av. 123, San José, San Pedro
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="derechos" data-translate="footer.derechos">
+            &copy; Shadow Riders <br />
+            Todos los derechos reservados
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="js/controllers/encuesta.js"></script>
+    <script src="js/controllers/translations.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+  </body>
+</html>

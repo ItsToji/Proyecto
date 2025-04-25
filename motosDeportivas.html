@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="css/motosDeportivas.css">
+    <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+    <div class="background"></div>
+    <div class="mainContainer">
+        <header>
+            <div class="mainLogo">
+                <a href="home.html">
+                    <img src="img/LogoBlack.svg" alt="">
+                </a>
+            </div>
+            <div class="mainNav">
+                <nav>
+                    <a href="quienesSomos.html" data-translate="nav.quienesSomos">Quienes Somos</a>
+                    <a href="nuestrosServicios.html" data-translate="nav.servicios">Nuestros Servicios</a>
+                    <a href="marcas.html" data-translate="nav.marcas">Marcas</a>
+                    <a href="opiniones.html" data-translate="nav.opiniones">Opiniones de Nuestros Clientes</a>
+                    <a href="serviciosEspeciales.html" data-translate="nav.serviciosEspeciales">Servicios Especiales</a>
+                    <a href="formContacto.html" data-translate="nav.contacto">Contacto</a>
+                    
+                    <div class="combo-header">
+                        <select id="tipoMoto" onchange="redirigirTipo()">
+                            <option data-translate="info.tipoMoto" value="">Tipo de Moto</option>
+                            <option data-translate="info.Deportiva" value="motosDeportivas.html">Deportiva</option>
+                            <option data-translate="info.Naked" value="motosNaked.html">Naked</option>
+                        </select>
+                    </div>
+                    
+                    <select id="languageSelector">
+                        <option data-translate="info.Español" value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                    <a href="landing.html" data-translate="nav.regresar">Regresar</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="deportivasInfo">
+                <h1 data-translate="info.tituloDeportivas">Motos Deportivas</h1>
+                <p data-translate="info.descripcionDeportivas">
+                    Las motos deportivas son sinónimo de velocidad, precisión y adrenalina. En Shadow Riders, te
+                    ofrecemos una selección de motocicletas diseñadas para quienes buscan emociones fuertes y un
+                    rendimiento superior en cada curva. Estas máquinas destacan por su aerodinámica, potencia de motor
+                    y tecnología avanzada, siendo ideales para quienes disfrutan de la conducción en carretera y en
+                    pista.
+
+                    Trabajamos con marcas líderes como Yamaha, Kawasaki, Suzuki, Ducati y Honda, conocidas por sus
+                    modelos icónicos como la R1, la Ninja ZX-10R o la CBR1000RR, que combinan ingeniería de alto nivel
+                    con diseño agresivo y moderno.
+
+                    En Shadow Riders no solo te asesoramos en la compra, también te preparamos para dominar este tipo
+                    de motos con total seguridad, brindándote acompañamiento, equipamiento y mantenimiento
+                    especializado.
+
+                    Si lo tuyo es la velocidad y el control, una moto deportiva es tu mejor aliada. ¡Sentí la potencia,
+                    dominá el asfalto y llevá tu conducción al siguiente nivel con nosotros!
+                </p>
+                <div class="tira-fotografica">
+                    <img src="img/deportiva1.jpg" alt="Moto Deportiva 1">
+                    <img src="img/deportiva2.jpg" alt="Moto Deportiva 2">
+                    <img src="img/deportiva3.jpg" alt="Moto Deportiva 3">
+                    <img src="img/deportiva4.jpg" alt="Moto Deportiva 4">
+                    <img src="img/deportiva5.jpg" alt="Moto Deportiva 5">
+                    <img src="img/deportiva6.jpg" alt="Moto Deportiva 6">
+                </div>
+            </div>
+        </main>
+
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerInfo">
+                    <div class="footerLogo">
+                        <img src="img/LogoBlack.svg" alt="">
+                    </div>
+                    <div class="containerInfo">
+                        <div class="Info">
+                            <img src="img/telefonoBlack.png" alt="">
+                            <p data-translate="footer.telefono">+506 6271-0602</p>
+                        </div>
+
+                        <div class="Info">
+                            <img src="img/correoBlack.png" alt="">
+                            <p data-translate="footer.correo">shadowriders@gmail.com</p>
+                        </div>
+                        <div class="Info">
+                            <img src="img/ubicacionBlack.png" alt="">
+                            <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="derechos" data-translate="footer.derechos">
+                    &copy; Shadow Riders <br> Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/controllers/homeScroll.js"></script>
+    <script src="js/controllers/translations.js"></script>
+    <script src="js/controllers/languageSwitcher.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/controllers/comboDoble.js"></script>
+    <script src="js/controllers/motosDeportivasyNaked.js"></script>
+
+
+</body>
+
+</html>

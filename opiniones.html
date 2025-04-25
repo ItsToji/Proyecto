@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio Web</title>
+  <link rel="stylesheet" href="css/opiniones.css">
+  <link rel="icon" href="img/moto.png">
+</head>
+
+<body id="home">
+  <div class="background"></div>
+  <div class="mainContainer">
+    <header>
+      <div class="mainLogo">
+        <a href="home.html">
+          <img src="img/LogoBlack.svg" alt="">
+        </a>
+      </div>
+      <div class="mainNav">
+        <nav>
+          <a href="quienesSomos.html" data-translate="nav.quienesSomos">Quienes Somos</a>
+          <a href="nuestrosServicios.html" data-translate="nav.servicios">Nuestros Servicios</a>
+          <a href="marcas.html" data-translate="nav.marcas">Marcas</a>
+          <a href="opiniones.html" data-translate="nav.opiniones">Opiniones de Nuestros Clientes</a>
+          <a href="serviciosEspeciales.html" data-translate="nav.serviciosEspeciales">Servicios Especiales</a>
+          <a href="formContacto.html" data-translate="nav.contacto">Contacto</a>
+          
+          <div class="combo-header">
+            <select id="tipoMoto" onchange="redirigirTipo()">
+              <option data-translate="info.tipoMoto" value="">Tipo de Moto</option>
+              <option data-translate="info.Deportiva" value="motosDeportivas.html">Deportiva</option>
+              <option data-translate="info.Naked" value="motosNaked.html">Naked</option>
+            </select>
+          </div>
+          
+          <select id="languageSelector">
+            <option data-translate="info.Español" value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+          <a href="landing.html" data-translate="nav.regresar">Regresar</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+
+      <div class="opiniones" id="Opiniones">
+        <h2 data-translate="info.opinion">Opiniones de Nuestros Clientes</h2>
+        <div class="carousel" id="carruselOpiniones">
+          <button class="prev" onclick="moverCarrusel(-1)">❮</button>
+          <div class="slides-wrapper">
+            <div class="slide active">
+              <div class="opinion">
+                <div class="imgCliente"><img src="img/cliente1.jpg" alt="" /></div>
+                <div class="opinionCliente">
+                  <p class="nombreCliente">Michelle V.</p>
+                  <p class="opiCliente" data-translate="info.opinionInfo1">Compré mi moto aquí. La atención fue increíble y me ayudaron a elegir el modelo perfecto para mí en minutos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="opinion">
+                <div class="imgCliente"><img src="img/cliente2.jpg" alt="" /></div>
+                <div class="opinionCliente">
+                  <p class="nombreCliente">Kevin L.</p>
+                  <p class="opiCliente" data-translate="info.opinionInfo2">El mantenimiento es lo mejor. Dejé mi moto en la mañana y en la tarde ya estaba lista, quedó como nueva.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="opinion">
+                <div class="imgCliente"><img src="img/cliente3.jpg" alt="" /></div>
+                <div class="opinionCliente">
+                  <p class="nombreCliente">Carlos R.</p>
+                  <p class="opiCliente" data-translate="info.opinionInfo3">Llevé mi moto para personalizarla y quedó espectacular. Se nota la calidad y el detalle en el trabajo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="next" onclick="moverCarrusel(1)">❯</button>
+        </div>
+      </div>
+
+      <div class="estadisticas">
+        <h2 data-translate="stats.titulo">Estadísticas en Nuestra Empresa</h2>
+        <div class="estadisticas-container">
+          <div class="stat-item">
+            <span class="contador" data-target="7">0</span>
+            <p data-translate="stats.experiencia">Años de Experiencia</p>
+          </div>
+          <div class="stat-item">
+            <span class="contador" data-target="726">0</span>
+            <p data-translate="stats.servicios">Servicios Realizados</p>
+          </div>
+          <div class="stat-item">
+            <span class="contador" data-target="4529">0</span>
+            <p data-translate="stats.clientes">Clientes Satisfechos</p>
+          </div>
+          <div class="stat-item">
+            <span class="contador" data-target="1221">0</span>
+            <p data-translate="stats.motos">Motocicletas Vendidas</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="footerInfo">
+          <div class="footerLogo">
+            <img src="img/LogoBlack.svg" alt="">
+          </div>
+          <div class="containerInfo">
+            <div class="Info">
+              <img src="img/telefonoBlack.png" alt="">
+              <p data-translate="footer.telefono">+506 6271-0602</p>
+            </div>
+            <div class="Info">
+              <img src="img/correoBlack.png" alt="">
+              <p data-translate="footer.correo">shadowriders@gmail.com</p>
+            </div>
+            <div class="Info">
+              <img src="img/ubicacionBlack.png" alt="">
+              <p data-translate="footer.ubicacion">Av. 123, San José, San Pedro</p>
+            </div>
+          </div>
+        </div>
+        <div class="derechos" data-translate="footer.derechos">
+          &copy; Shadow Riders <br> Todos los derechos reservados
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/controllers/homeScroll.js"></script>
+  <script src="js/controllers/contactFormHome.js"></script>
+  <script src="js/controllers/translations.js"></script>
+  <script src="js/controllers/languageSwitcher.js"></script>
+  <script src="js/controllers/opiniones.js"></script>
+  <script src="js/controllers/comboDoble.js"></script>
+
+
+
+</body>
+
+</html>

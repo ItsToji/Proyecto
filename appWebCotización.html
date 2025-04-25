@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitio Web</title>
+  <link rel="stylesheet" href="css/appWebCotización.css" />
+  <link rel="icon" href="img/moto.png" />
+</head>
+
+<body id="home">
+  <div class="background"></div>
+  <div class="mainContainer">
+    <header>
+      <div class="mainLogo">
+        <a href="appWeb.html">
+          <img src="img/LogoBlack.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="cotizacionTitulo">
+        <h1 data-translate="nav.cotizacionTitulo">Cotización de Moto</h1>
+        <p data-translate="nav.cotizacionParrafo">
+          ¡Completa el formulario y recibe tu cotización!
+        </p>
+      </div>
+
+      <div class="mainNav">
+        <nav>
+          <a href="appWeb.html" data-translate="nav.landing">Regresar</a>
+          <select id="languageSelector">
+            <option data-translate="info.Español" value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="cotizacion-container">
+        <div class="fila-detalle">
+          <div class="especificaciones">
+            <h3 data-translate="especificaciones.especs">Especificaciones</h3>
+            <div id="motoSpecs"></div>
+          </div>
+          <div class="moto-detalle">
+            <img id="motoImagen" src="" alt="" />
+            <h2 id="modeloMoto"></h2>
+            <p id="marcaMoto"></p>
+            <p id="precioMoto"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="containerResumen">
+        <div class="containerEspaciosMain">
+          <div class="containerEspacios">
+            <form id="formCotizacion">
+              <div class="formCotizacionEspacio1">
+                <input type="text" name="nombre" placeholder="Nombre completo" required
+                  data-translate="formularioCoti.nombreCoti" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                  title="Solo se permiten letras y espacios" />
+
+                <input type="text" name="cedula" placeholder="Cédula" required
+                  data-translate="formularioCoti.cedulaCoti" pattern="[0-9]+" title="Solo se permiten números" />
+
+              </div>
+
+              <div class="formCotizacionEspacio2">
+                <input type="tel" name="telefono" placeholder="Teléfono" required
+                  data-translate="formularioCoti.telefonoCoti" pattern="[0-9]{8}" maxlength="8"
+                  title="Debe tener exactamente 8 dígitos numéricos" />
+
+                <input type="email" name="correo" placeholder="Correo electrónico" required
+                  data-translate="formularioCoti.emailCoti" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$"
+                  title="Solo se permite correo de Gmail" />
+
+              </div>
+
+              <div class="containerPlazos">
+                <div class="containerFormCotizacion2">
+                  <form id="formCotizacion2">
+                    <label for="plazo" data-translate="formularioCoti.plazo">Plazo:</label>
+                    <select name="plazo" id="plazo" required>
+                      <option value="12" data-translate="formularioCoti.M12">12 meses</option>
+                      <option value="24" data-translate="formularioCoti.M24">24 meses</option>
+                      <option value="36" data-translate="formularioCoti.M36">36 meses</option>
+                    </select>
+                  </form>
+                </div>
+                <div class="containerButton">
+                  <button type="submit" data-translate="formularioCoti.Enviar">Enviar Cotización</button>
+                </div>
+              </div>
+
+              <div class="containerButtonMain">
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="detalleCotizacion" class="detalle-cotizacion">
+          <h3 data-translate="detalleCoti.resumen">Resumen de Cotización</h3>
+          <ul>
+            <li>
+              <strong data-translate="detalleCoti.precio">Precio de la moto:</strong>
+              <span id="detallePrecio"></span>
+            </li>
+            <li>
+              <strong data-translate="detalleCoti.plazo">Plazo de Meses:</strong> <span id="detallePlazo"></span>
+            </li>
+            <li>
+              <strong data-translate="detalleCoti.tasa">Tasa de interés:</strong>
+              <span id="detalleInteres"></span>%
+            </li>
+            <li>
+              <strong data-translate="detalleCoti.cuota">Cuota mensual estimada:</strong>
+              <span id="detalleCuota"></span>
+            </li>
+            <li>
+              <strong data-translate="detalleCoti.total">Total a pagar:</strong> <span id="detalleTotal"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="footerInfo">
+          <div class="footerLogo">
+            <img src="img/LogoBlack.svg" alt="" />
+          </div>
+          <div class="containerInfo">
+            <div class="Info">
+              <img src="img/telefonoBlack.png" alt="" />
+              <p data-translate="footer.telefono">+506 6271-0602</p>
+            </div>
+            <div class="Info">
+              <img src="img/correoBlack.png" alt="" />
+              <p data-translate="footer.correo">shadowriders@gmail.com</p>
+            </div>
+            <div class="Info">
+              <img src="img/ubicacionBlack.png" alt="" />
+              <p data-translate="footer.ubicacion">
+                Av. 123, San José, San Pedro
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="derechos" data-translate="footer.derechos">
+          &copy; Shadow Riders <br />
+          Todos los derechos reservados
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/controllers/translations.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/controllers/homeScroll.js"></script>
+  <script src="js/controllers/languageSwitcher.js"></script>
+  <script src="js/controllers/comboDoble.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/controllers/appWebCotizacion.js"></script>
+</body>
+
+</html>
