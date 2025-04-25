@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+.mainContainer {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.mainLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 50px;
+}
+
+.mainLogo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainNav {
+  display: flex;
+  margin-right: 60px;
+}
+.mainNav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.mainNav nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+.mainNav nav a:hover {
+  color: rgb(108, 108, 108);
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.mainNav nav select {
+  font-family: "Bebas Neue", cursive;
+  background-color: black;
+  color: white;
+  border: 0px white;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  padding: 2px 5px;
+}
+
+.mainNav nav select option {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.mainNav nav select:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/*Tipos de Deportivas*/
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.deportivasInfo {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 105vh;
+  text-align: center;
+}
+
+.deportivasInfo h1 {
+  margin: 20px 0px;
+  margin-bottom: 0;
+  color: black;
+  font-size: 60px;
+}
+
+.deportivasInfo p {
+  text-align: center;
+  width: 70%;
+  color: rgb(108, 108, 108);
+  font-size: 25px;
+}
+
+.tira-fotografica {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 19px;
+  padding: 10px 0;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.tira-fotografica::-webkit-scrollbar {
+  display: none; 
+}
+
+.tira-fotografica img {
+  width: calc(
+    (100% - 40px) / 3
+  ); 
+  max-height: 300px; 
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/*Footer*/
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: auto;
+  padding-top: 20px;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.footerInfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.containerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.footerContainer p {
+  font-size: 20px;
+}
+
+.Info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.Info img {
+  width: 25px;
+  height: 25px;
+}
+
+.derechos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}

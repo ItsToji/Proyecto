@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+.mainContainer {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.mainLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 50px;
+}
+
+.mainLogo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainNav {
+  display: flex;
+  margin-right: 60px;
+}
+.mainNav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.mainNav nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+.mainNav nav a:hover {
+  color: rgb(108, 108, 108);
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.mainNav nav select {
+  font-family: "Bebas Neue", cursive;
+  background-color: black;
+  color: white;
+  border: 0px white;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  padding: 2px 5px;
+}
+
+.mainNav nav select option {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.mainNav nav select:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/*Nuestros Servicios*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.servicios {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 50px 0;
+}
+
+.servicios h1 {
+  font-size: 60px;
+}
+
+.serviciosContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 550px;
+}
+
+.containerImg {
+  display: flex;
+  width: 100%;
+}
+
+.containerImg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.texts {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(108, 108, 108);
+}
+
+.texts h2 {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.texts p {
+  font-size: 25px;
+  color: rgb(108, 108, 108);
+}
+
+.centrado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/*Pestañas de Servicios*/
+
+.pestañas {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.pestañas h2 {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  font-size: 25px;
+}
+
+.tab-button.active {
+  font-family: "Bebas Neue", cursive;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(108, 108, 108, 0.144) 0px 0px 5px;
+}
+
+.tab-button.active:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.tab-button {
+  font-family: "Bebas Neue", cursive;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: #ccc;
+  background-color: rgba(108, 108, 108, 0.144);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(108, 108, 108, 0.144) 0px 0px 5px;
+}
+
+.tab-button:hover {
+  color: black;
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.tab-content {
+  padding: 20px;
+  background-color: rgba(108, 108, 108, 0.144);
+  border-radius: 20px;
+}
+
+.tab {
+  display: none;
+  font-size: 20px;
+  color: rgb(108, 108, 108);
+  text-align: center;
+}
+
+.tab.active {
+  display: block;
+  font-size: 20px;
+  color: rgb(108, 108, 108);
+  text-align: center;
+}
+
+/*Contacto*/
+.subscripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  padding: 50px 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.subscripcion h2 {
+  font-size: 60px;
+}
+
+.subscripcion p {
+  font-size: 25px;
+  color: rgb(108, 108, 108);
+}
+
+.subscripcion form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subscripcion form input {
+  font-family: "Bebas Neue", cursive;
+  width: 400px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(108, 108, 108, 0.144);
+  box-shadow: rgba(108, 108, 108, 0.144) 0px 0px 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.subscripcion form button {
+  font-family: "Bebas Neue", cursive;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(108, 108, 108, 0.144) 0px 0px 5px;
+}
+
+.subscripcion form button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+/*Footer*/
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: auto;
+  padding-top: 20px;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.footerInfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.containerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.footerContainer p {
+  font-size: 20px;
+}
+
+.Info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.Info img {
+  width: 25px;
+  height: 25px;
+}
+
+.derechos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}

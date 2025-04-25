@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+.mainContainer {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.mainLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 50px;
+}
+
+.mainLogo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainNav {
+  display: flex;
+  margin-right: 60px;
+}
+
+.mainNav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.mainNav nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+.mainNav nav a:hover {
+  color: rgb(108, 108, 108);
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.mainNav nav select {
+  font-family: "Bebas Neue", cursive;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  padding: 2px 5px;
+}
+
+.mainNav nav select option {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.mainNav nav select:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/*Opiniones*/
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.opiniones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px; 
+  text-align: center;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.opiniones h2 {
+  font-size: 60px;
+  color: black;
+  text-align: center;
+  width: 100%;
+  padding-top: 50px; 
+}
+
+.containerOpiniones {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.opinion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgCliente {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.imgCliente img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.opinionCliente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 270px;
+  height: auto;
+  padding: 25px;
+}
+.opinionCliente p {
+  font-size: 25px;
+}
+
+.nombreCliente {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.opiCliente {
+  color: #555;
+  max-width: 90%;
+  margin: auto;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.slides-wrapper {
+  position: relative;
+  height: auto;
+  min-height: 420px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  z-index: 0;
+  padding: 20px 0;
+  pointer-events: none;
+}
+
+.slide.active {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+  pointer-events: auto;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  font-weight: 300; 
+  font-family: Arial, sans-serif; 
+  line-height: 1;
+}
+
+button.prev:hover,
+button.next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+button.prev {
+  left: 15px;
+}
+
+button.next {
+  right: 15px;
+}
+
+.estadisticas {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.estadisticas h2 {
+  font-size: 60px;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.estadisticas-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.stat-item {
+  min-width: 150px;
+}
+
+.stat-item .contador {
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 20px;
+  color: #333;
+}
+
+/*Footer*/
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: auto;
+  padding-top: 20px;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.footerInfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.containerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.footerContainer p {
+  font-size: 20px;
+}
+
+.Info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.Info img {
+  width: 25px;
+  height: 25px;
+}
+
+.derechos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}

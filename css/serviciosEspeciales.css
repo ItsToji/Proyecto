@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+}
+
+.mainContainer {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+.mainLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 50px;
+}
+
+.mainLogo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainNav {
+  display: flex;
+  margin-right: 60px;
+}
+.mainNav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.mainNav nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+.mainNav nav a:hover {
+  color: rgb(108, 108, 108);
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.mainNav nav select {
+  font-family: "Bebas Neue", cursive;
+  background-color: black;
+  color: white;
+  border: 0px white;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  padding: 2px 5px;
+}
+
+.mainNav nav select option {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.mainNav nav select:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/*Servicos Especiales*/
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviciosEspeciales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  height: 100%;
+}
+
+.serviciosEspeciales h2 {
+  font-size: 50px;
+  color: black;
+  margin: 120px 0 20px; 
+}
+
+.containerServiciosEspeciales {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.servicioEspecial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgServicioEspecial {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.imgServicioEspecial img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.servicioEspecialContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 500px;
+  height: auto;
+  padding: 25px;
+}
+
+.servicioEspecialContainer p {
+  font-size: 25px;
+}
+
+.nombreServicio {
+  color: black;
+}
+
+.desServicio {
+  color: rgb(108, 108, 108);
+}
+
+.encabezadoServicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 140px;
+  margin-bottom: 20px;
+  margin-left: 535px;
+}
+
+.encabezadoServicios h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.buscadorServicios input {
+  font-family: "Bebas Neue", cursive;
+  padding: 10px 20px;
+  width: 280px;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-left: 225px;
+}
+
+.buscadorServicios input:focus {
+  border-color: rgb(108, 108, 108);
+}
+
+/*Footer*/
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: auto;
+  padding-top: 20px;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.footerInfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.containerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.footerContainer p {
+  font-size: 20px;
+}
+
+.Info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.Info img {
+  width: 25px;
+  height: 25px;
+}
+
+.derechos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
